@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Light;
 use Illuminate\Http\Request;
 
 class LightController extends Controller
@@ -13,7 +14,7 @@ class LightController extends Controller
      */
     public function index()
     {
-        return view('light.index', []);
+        return view('light.index', ['lights' => Light::getList()]);
     }
 
     /**

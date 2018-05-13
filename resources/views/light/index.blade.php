@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <a href="{{ route('light') }}" class="btn bg-olive btn-flat margin">Создать</a>
+    <a href="" class="btn bg-olive btn-flat margin">Создать</a>
 {{--@widget('filter', ['fields' => ['name' => 'name']])--}}
 <div class="row">
     <div class="col-xs-12">
@@ -14,15 +14,19 @@
                         <th>Показатели</th>
                         <th>Тариф</th>
                         <th>Сумма</th>
+                        <th>Комментарий</th>
                         <th></th>
                     </tr>
-                    {{--  @foreach($areas AS $area)
+                      @foreach($lights AS $light)
                           <tr>
-                              <td width="50%">{{ $area->name }}</td>
-                              <td width="20%"><a href="{{route('admin.providers-regions.edit', ['id' => $area->shopRegion->id])}}">{{ $area->shopRegion->name }}</a></td>
-                              <td width="15%">@widget('listButtons', ['routeBase' => 'providers-areas.', 'id' => $area->id, 'view' => false])</td>
+                              <td>{{ $light->created_at }}</td>
+                              <td>{{ $light->value }}</td>
+                              <td>{{ $light->cost }}</td>
+                              <td>{{ $light->amount }}</td>
+                              <td>{{ $light->comment }}</td>
+                              <td></td>
                           </tr>
-                      @endforeach--}}
+                      @endforeach
                 </table>
             </div>
         </div>

@@ -14,4 +14,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/light', ['as' => 'light', 'uses' => 'LightController@index']);
+Route::resource('/light', 'LightController', ['except' => ['show'], 'as' => 'light']);
