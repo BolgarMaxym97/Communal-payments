@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <a href="" class="btn bg-olive btn-flat margin">Создать</a>
+    <a href="{{route('light.create')}}" class="btn bg-olive btn-flat margin">Создать</a>
 {{--@widget('filter', ['fields' => ['name' => 'name']])--}}
 <div class="row">
     <div class="col-xs-12">

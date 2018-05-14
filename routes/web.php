@@ -14,4 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('/light', 'LightController', ['except' => ['show'], 'as' => 'light']);
+Route::get('/light', ['as' => 'light.index', 'uses' => 'LightController@index']);
+Route::get('/light/create', ['as' => 'light.create', 'uses' => 'LightController@create']);
+Route::post('/light/store', ['as' => 'light.store', 'uses' => 'LightController@store']);
+Route::match(['get', 'post'],'/light/update/{id}', ['as' => 'light.update', 'uses' => 'LightController@update']);

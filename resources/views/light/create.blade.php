@@ -1,8 +1,8 @@
-@extends('admin.layouts.main')
+@extends('welcome')
 @section('content')
-    {!! Form::open(['route' => 'admin.staff-directors.store', 'files' => true]) !!}
-    @include('admin.widgets.form.buttons', ['create' => true])
-    @include('admin.staff.directors._form')
-    @include('admin.widgets.form.buttons', ['create' => true])
-    {!! Form::close() !!}
+    <form action="{{route('light.store')}}" method="POST">
+        {{ csrf_field() }}
+        @include('light._form')
+        @include('widgets.form.buttons', ['create' => true])
+    </form>
 @stop
