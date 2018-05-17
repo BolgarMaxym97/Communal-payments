@@ -26,9 +26,9 @@ Route::resource('water', 'WaterController');
 Route::get('water/{id}/delete', ['as' => 'water.delete', 'uses' => 'WaterController@destroy']);
 Route::post('water/{id}/update', ['as' => 'water.upd', 'uses' => 'WaterController@update']);
 
-Route::resource('comunal', 'ComunalController');
-Route::get('comunal/{id}/delete', ['as' => 'comunal.delete', 'uses' => 'ComunalController@destroy']);
-Route::post('comunal/{id}/update', ['as' => 'comunal.upd', 'uses' => 'ComunalController@update']);
+Route::resource('comunals', 'ComunalsController');
+Route::get('comunals/{id}/delete', ['as' => 'comunals.delete', 'uses' => 'ComunalsController@destroy']);
+Route::post('comunals/{id}/update', ['as' => 'comunals.upd', 'uses' => 'ComunalsController@update']);
 
 Route::resource('warm', 'WarmController');
 Route::get('warm/{id}/delete', ['as' => 'warm.delete', 'uses' => 'WarmController@destroy']);

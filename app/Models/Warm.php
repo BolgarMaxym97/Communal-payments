@@ -25,5 +25,13 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Warm extends Model
 {
-    //
+    protected $table = 'warms';
+
+    protected $fillable = ['amount', 'cost', 'comment'];
+
+
+    public static function getList()
+    {
+        return self::latest('created_at')->get();
+    }
 }

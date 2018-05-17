@@ -23,5 +23,13 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Comunal extends Model
 {
-    //
+    protected $table = 'comunals';
+
+    protected $fillable = ['amount', 'cost', 'comment'];
+
+
+    public static function getList()
+    {
+        return self::latest('created_at')->get();
+    }
 }

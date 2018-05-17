@@ -131,7 +131,7 @@ return [
         ],
         [
             'text' => 'ЖЭК',
-            'url'  => '/comunal',
+            'url'  => '/comunals',
             'icon' => 'truck',
         ],
         [
