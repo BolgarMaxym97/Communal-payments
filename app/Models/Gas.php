@@ -25,5 +25,13 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Gas extends Model
 {
-    //
+    protected $table = 'gas';
+
+    protected $fillable = ['amount', 'value', 'cost', 'comment'];
+
+
+    public static function getList()
+    {
+        return self::latest('created_at')->get();
+    }
 }

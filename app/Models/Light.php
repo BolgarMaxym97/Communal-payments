@@ -29,7 +29,7 @@ class Light extends Model
 {
     protected $table = 'lights';
 
-    protected $fillable = ['amount', 'value', 'cost', 'comment'];
+    protected $fillable = ['amount', 'value', 'cost', 'comment', 'additionalCost'];
 
 
     public static function getList()
