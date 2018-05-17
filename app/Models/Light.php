@@ -22,6 +22,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Light whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Light whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Light whereValue($value)
+ * @property float|null $additionalCost
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Light whereAdditionalCost($value)
  */
 class Light extends Model
 {

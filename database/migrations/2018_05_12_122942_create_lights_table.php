@@ -18,6 +18,7 @@ class CreateLightsTable extends Migration
             $table->float('amount');
             $table->integer('value');
             $table->float('cost')->nullable();
+            $table->float('additionalCost')->nullable();
             $table->string('comment')->nullable();
             $table->timestamps();
         });

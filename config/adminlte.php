@@ -110,6 +110,11 @@ return [
     'menu' => [
         'Комуналка',
         [
+            'text' => 'Тарифы',
+            'url'  => '/tariffs',
+            'icon' => 'money',
+        ],
+        [
             'text' => 'Свет',
             'url'  => '/light',
             'icon' => 'lightbulb-o',

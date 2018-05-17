@@ -2,12 +2,7 @@
     <div class="col-md-12">
         <div class="box box-primary">
             <div class="box-body">
-                <div class="form-group">
-                    <label for="amount">Сумма
-                        {{ csrf_field() }}
-                        <input type="text" class="form-control" name="amount" value="{{isset($object) ? $object->amount : ''}}">
-                    </label>
-                </div>
+                {{ csrf_field() }}
                 <div class="form-group">
                     <label for="value">Показания
                         <input type="text" class="form-control" name="value" value="{{isset($object) ? $object->value : ''}}">

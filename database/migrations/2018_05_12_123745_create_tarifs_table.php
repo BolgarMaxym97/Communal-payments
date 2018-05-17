@@ -17,6 +17,7 @@ class CreateTarifsTable extends Migration
             $table->increments('id');
             $table->string('slug');
             $table->float('value');
+            $table->float('additionalValue');
             $table->timestamps();
         });
     }

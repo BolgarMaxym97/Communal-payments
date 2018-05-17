@@ -18,6 +18,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tarif whereSlug($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tarif whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tarif whereValue($value)
+ * @property float $additionalValue
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tarif whereAdditionalValue($value)
  */
 class Tarif extends Model
 {
