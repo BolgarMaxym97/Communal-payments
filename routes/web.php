@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as' => 'index', 'uses' => 'WelcomeController@index']);
 Route::resource('light', 'LightController');
 Route::get('light/{id}/delete', ['as' => 'light.delete', 'uses' => 'LightController@destroy']);
 Route::post('light/{id}/update', ['as' => 'light.upd', 'uses' => 'LightController@update']);
@@ -30,6 +28,10 @@ Route::resource('comunals', 'ComunalsController');
 Route::get('comunals/{id}/delete', ['as' => 'comunals.delete', 'uses' => 'ComunalsController@destroy']);
 Route::post('comunals/{id}/update', ['as' => 'comunals.upd', 'uses' => 'ComunalsController@update']);
 
-Route::resource('warm', 'WarmController');
-Route::get('warm/{id}/delete', ['as' => 'warm.delete', 'uses' => 'WarmController@destroy']);
-Route::post('warm/{id}/update', ['as' => 'warm.upd', 'uses' => 'WarmController@update']);
+Route::resource('warms', 'WarmsController');
+Route::get('warms/{id}/delete', ['as' => 'warms.delete', 'uses' => 'WarmsController@destroy']);
+Route::post('warms/{id}/update', ['as' => 'warms.upd', 'uses' => 'WarmsController@update']);
+
+Route::resource('tarifs', 'TarifsController');
+Route::get('tarifs/{id}/delete', ['as' => 'tarifs.delete', 'uses' => 'TarifsController@destroy']);
+Route::post('tarifs/{id}/update', ['as' => 'tarifs.upd', 'uses' => 'TarifsController@update']);

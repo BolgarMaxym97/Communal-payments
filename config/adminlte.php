@@ -85,7 +85,7 @@ return [
     |
     */
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/',
 
     'logout_url' => '',
 
@@ -111,7 +111,7 @@ return [
         'Комуналка',
         [
             'text' => 'Тарифы',
-            'url'  => '/tariffs',
+            'url'  => '/tarifs',
             'icon' => 'money',
         ],
         [
@@ -136,7 +136,7 @@ return [
         ],
         [
             'text' => 'Отопление',
-            'url'  => '/warm',
+            'url'  => '/warms',
             'icon' => 'snowflake-o',
         ],
 
