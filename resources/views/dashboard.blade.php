@@ -3,10 +3,11 @@
     <div class="row">
         <div class="col-md-12">
             <div class="box box-info">
-                <div class="box-header ui-sortable-handle" style="cursor: move;">
+                <div class="box-header">
                     <i class="fa fa-money"></i>
 
-                    <h3 class="box-title">Суммы платежей за все время</h3>
+                    <h3 class="box-title">Суммы платежей за все время: <span style="color: red"><?= $total ?> грн.</span>
+                    </h3>
                 </div>
                 <div class="box-body" style="margin: auto;">
                     <div class="row ">
@@ -96,10 +97,11 @@
     <div class="row">
         <div class="col-md-12">
             <div class="box box-info">
-                <div class="box-header ui-sortable-handle" style="cursor: move;">
+                <div class="box-header">
                     <i class="fa fa-money"></i>
 
-                    <h3 class="box-title">Последние платежи</h3>
+                    <h3 class="box-title">Последние платежи: <span style="color: red"><?= $totalMouth; ?> грн. - без учета отопления</span>
+                    </h3>
                 </div>
                 <div class="box-body" style="margin: auto;">
                     <div class="row ">

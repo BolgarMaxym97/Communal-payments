@@ -39,27 +39,32 @@ class WelcomeController extends Controller
         $gasPrevValue = Gas::latest('created_at')->skip(1)->first();
         $waterPrevValue = Water::latest('created_at')->skip(1)->first();
 
+        $totalSums = [
+            'light' => $lightSum,
+            'gas' => $gasSum,
+            'water' => $waterSum,
+            'comunal' => $comunalSum,
+            'warm' => $warmSum,
+        ];
+        $last = [
+            'light' => $lightLast,
+            'gas' => $gasLast,
+            'water' => $waterLast,
+            'comunal' => $comunalLast,
+            'warm' => $warmLast,
+            'lightLastValue' => $lightLastValue ? $lightLastValue->value : 0,
+            'gasLastValue' => $gasLastValue ? $gasLastValue->value : 0,
+            'waterLastValue' => $waterLastValue ? $waterLastValue->value : 0,
+            'lightPrevValue' => $lightPrevValue ? $lightPrevValue->value : 0,
+            'gasPrevValue' => $gasPrevValue ? $gasPrevValue->value : 0,
+            'waterPrevValue' => $waterPrevValue ? $waterPrevValue->value : 0,
+        ];
+
         return view('dashboard', [
-            'totalSums' => [
-                'light' => $lightSum,
-                'gas' => $gasSum,
-                'water' => $waterSum,
-                'comunal' => $comunalSum,
-                'warm' => $warmSum,
-            ],
-            'last' => [
-                'light' => $lightLast,
-                'gas' => $gasLast,
-                'water' => $waterLast,
-                'comunal' => $comunalLast,
-                'warm' => $warmLast,
-                'lightLastValue' => $lightLastValue ? $lightLastValue->value : 0,
-                'gasLastValue' => $gasLastValue ? $gasLastValue->value : 0,
-                'waterLastValue' => $waterLastValue ? $waterLastValue->value : 0,
-                'lightPrevValue' => $lightPrevValue ? $lightPrevValue->value : 0,
-                'gasPrevValue' => $gasPrevValue ? $gasPrevValue->value : 0,
-                'waterPrevValue' => $waterPrevValue ? $waterPrevValue->value : 0,
-            ],
+            'totalSums' => $totalSums,
+            'last' => $last,
+            'total' => array_sum($totalSums),
+            'totalMouth' => $last['light'] +  $last['gas'] +  $last['water'] + $last['comunal'],
         ]);
     }
 }
