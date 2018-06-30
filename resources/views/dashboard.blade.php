@@ -100,7 +100,7 @@
                 <div class="box-header">
                     <i class="fa fa-money"></i>
 
-                    <h3 class="box-title">Последние платежи: <span style="color: red"><?= $totalMouth; ?> грн. - без учета отопления</span>
+                    <h3 class="box-title">Последние платежи: <span style="color: red"><?= $totalMouth; ?> грн. - без учета отопления и ЖЕК"а</span>
                     </h3>
                 </div>
                 <div class="box-body" style="margin: auto;">

@@ -64,7 +64,7 @@ class WelcomeController extends Controller
             'totalSums' => $totalSums,
             'last' => $last,
             'total' => array_sum($totalSums),
-            'totalMouth' => $last['light'] +  $last['gas'] +  $last['water'] + $last['comunal'],
+            'totalMouth' => $last['light'] +  $last['gas'] +  $last['water'],
         ]);
     }
 }
